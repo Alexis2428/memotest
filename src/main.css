@@ -1,0 +1,17 @@
+.fila {
+    height: 25vh;
+}
+
+.columna {
+    border: solid black;
+}
+
+.cuadrado {
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.oculto {
+    display: none;
+}
