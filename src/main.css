@@ -15,3 +15,31 @@
 .oculto {
     display: none;
 }
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.negro {
+    background-color: black;
+}
+
+.naranja {
+    background-color: orange;
+}
+
+.emparejado {
+    background-color: gray;
+}
