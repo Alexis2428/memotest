@@ -9,13 +9,13 @@
     <title>Memotest</title>
 </head>
 <body>
-    <div class="container alert alert-info text-center" role="alert">
+    <div id="titulo" class="container alert alert-info text-center" role="alert">
         <h4 class="alert-heading">Memotest</h4>
     </div>
 
-    <button name="comenzar" class="btn btn-outline-primary d-grid col-2 mx-auto mb-1">Comenzar juego</button>
+    <button type="button" id="comenzar" class="btn btn-outline-primary d-grid col-2 mx-auto mb-1">Comenzar juego</button>
 
-    <div name="tablero" class="oculto">
+    <div id="tablero" class="oculto">
         <div class="container-fluid">
             <div class="row fila">
                 <div class="col p-0 columna">
@@ -64,6 +64,6 @@
         </div>
     </div>
 
-    <button name="reiniciar" class="btn btn-outline-primary col-2 mx-auto d-grid">Reiniciar juego</button>
+    <button type="button" id="reiniciar" class="btn btn-outline-primary col-2 mx-auto oculto">Reiniciar juego</button>
 </body>
 </html>
