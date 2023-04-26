@@ -48,6 +48,14 @@
     background-color: hotpink;
 }
 
+.cyan-oscuro {
+    background-color: darkcyan;
+}
+
+.violeta-oscuro {
+    background-color: darkviolet;
+}
+
 .emparejado {
     background-color: gray;
 }

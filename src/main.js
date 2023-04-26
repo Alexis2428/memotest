@@ -46,7 +46,7 @@ function crearCuadro() {
 }
 
 function crearColores() {
-    const coloresCuadros = ['rojo', 'verde', 'azul', 'amarillo', 'negro', 'naranja', 'agua', 'rosa'];
+    const coloresCuadros = ['rojo', 'verde', 'azul', 'amarillo', 'negro', 'naranja', 'agua', 'rosa', 'cyan-oscuro', 'violeta-oscuro'];
     let coloresRepetidos = coloresCuadros.concat(coloresCuadros);
     coloresRepetidos.sort(function() {
         return 0.5 - Math.random();
