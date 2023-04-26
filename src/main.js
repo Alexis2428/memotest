@@ -61,9 +61,48 @@ function asignarColorCuadros(colores) {
     })
 }
 
+function manejarEventos() {
+    $tablero.onclick = function(e) {
+        const $elemento = e.target;
+        
+        if ($elemento.classList.contains('cuadro')) {
+            manejarClickUsuario($elemento);
+        }
+    }
+}
+
+function manejarClickUsuario($cuadroActual) {
+    mostrarCuadro($cuadroActual);
+
+    if ($primerCuadro === null) {
+        $primerCuadro = $cuadroActual;
+        
+    } else {
+        if ($primerCuadro === $cuadroActual) {
+            return;
+        }
+
+        turnos++;
+    
+        if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
+            borrarCuadro($primerCuadro);
+            borrarCuadro($cuadroActual);
+
+        } else {
+            ocultarCuadro($primerCuadro);
+            ocultarCuadro($cuadroActual);
+        }
+
+        $primerCuadro = null;
+    }
+}
 
 function mostrarCuadro($cuadro) {
     $cuadro.style.opacity = 1;
+}
+
+function cuadrosSonIguales($cuadro1, $cuadro2) {
+    return $cuadro1.className === $cuadro2.className;
 }
 
 function ocultarCuadro($cuadro) {
