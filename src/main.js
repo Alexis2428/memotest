@@ -61,6 +61,24 @@ function asignarColorCuadros(colores) {
     })
 }
 
+
+function mostrarCuadro($cuadro) {
+    $cuadro.style.opacity = 1;
+}
+
+function ocultarCuadro($cuadro) {
+    setTimeout(function() {
+        $cuadro.style.opacity = 0;
+    }, 500);
+}
+
+function borrarCuadro($cuadro) {
+    setTimeout(function() {
+        $cuadro.parentElement.classList.add('emparejado');
+        $cuadro.remove();
+        evaluarFinJuego();
+    }, 500);
+}
 function mostrarElemento(elemento) {
     document.querySelector(`#${elemento}`).classList.remove('oculto');
 }
