@@ -118,6 +118,16 @@ function borrarCuadro($cuadro) {
         evaluarFinJuego();
     }, 500);
 }
+
+function evaluarFinJuego() {
+    if ($tablero.querySelectorAll('.cuadro').length === 0) {
+        ocultarElemento('tablero');
+        document.querySelector('#turnos').innerText = turnos.toString();
+        mostrarElemento('texto-fin-juego');
+        alternarEstadoBoton('reiniciar', 'oculto');
+    }
+}
+
 function mostrarElemento(elemento) {
     document.querySelector(`#${elemento}`).classList.remove('oculto');
 }
