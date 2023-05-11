@@ -83,6 +83,7 @@ function manejarClickUsuario($cuadroActual) {
         }
 
         turnos++;
+        bloquearInputUsuario();
     
         if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
             borrarCuadro($primerCuadro);
@@ -108,6 +109,7 @@ function cuadrosSonIguales($cuadro1, $cuadro2) {
 function ocultarCuadro($cuadro) {
     setTimeout(function() {
         $cuadro.style.opacity = 0;
+        manejarEventos();
     }, 500);
 }
 
@@ -115,6 +117,8 @@ function borrarCuadro($cuadro) {
     setTimeout(function() {
         $cuadro.parentElement.classList.add('emparejado');
         $cuadro.remove();
+        manejarEventos();
+        
         evaluarFinJuego();
     }, 500);
 }
@@ -146,4 +150,8 @@ function alternarEstadoBoton(boton, estado) {   // la función recibe el estado 
         $boton.classList.add('oculto');
         $boton.classList.remove('d-grid');
     }
+}
+
+function bloquearInputUsuario() {
+    $tablero.onclick = function() {};
 }
