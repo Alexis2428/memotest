@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Alexis2428/memotest#readme",
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "cypress": "^12.12.0"
   }
 }
